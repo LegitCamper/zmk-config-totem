@@ -79,10 +79,10 @@
 
         num_layer {
             bindings = <
-        &trans        &trans        &trans        &kp UNDER        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp KP_EQUAL      &trans     &trans  &trans
-        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4     &kp N5              &kp NUMBER_6       &kp N7            &kp N8     &kp N9  &kp N0
-&trans  &trans        &trans        &kp ENTER     &kp KP_SUBTRACT  &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp PLUS          &kp TILDE  &trans  &kp GRAVE  &trans
-                                    &trans        &trans           &trans              &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &trans
+          &trans        &trans        &trans        &kp UNDER        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp KP_EQUAL      &trans     &trans  &trans
+          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4     &kp N5              &kp NUMBER_6       &kp N7            &kp N8     &kp N9  &kp N0
+&kp CLCK  &trans        &trans        &kp ENTER     &kp KP_SUBTRACT  &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp PLUS          &kp TILDE  &trans  &kp GRAVE  &trans
+                                      &trans        &trans           &trans              &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &trans
             >;
 
             label = "NUM";
