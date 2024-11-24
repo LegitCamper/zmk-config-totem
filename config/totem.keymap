@@ -40,6 +40,17 @@
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <34 35>;
         };
+
+        alt_mod: alt_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALT_MOD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            hold-trigger-key-positions = <19 10>;
+        };
     };
 
     keymap {
@@ -64,10 +75,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q           &kp W           &kp E          &kp R        &kp T                 &kp Y             &kp U        &kp I        &kp O            &kp P
-       &mt LEFT_ALT A  &mt LEFT_WIN S  &mt LCTRL D    &mt LSHFT F  &kp G                 &kp H             &mt RSHFT J  &mt RCTRL K  &mt RIGHT_GUI L  &mt RIGHT_ALT SEMICOLON
-&to 3  &kp Z           &kp X           &kp C          &kp V        &kp B                 &kp N             &kp M        &kp COMMA    &kp DOT          &kp FSLH                 &kp BSLH
-                                       &kp BACKSPACE  &kp ESC      &layer_mod 1 SPACE    &layer_mod 2 RET  &kp TAB      &kp DEL
+       &kp Q                &kp W           &kp E          &kp R        &kp T                 &kp Y             &kp U        &kp I        &kp O            &kp P
+       &alt_mod LEFT_ALT A  &mt LEFT_WIN S  &mt LCTRL D    &mt LSHFT F  &kp G                 &kp H             &mt RSHFT J  &mt RCTRL K  &mt RIGHT_GUI L  &alt_mod RIGHT_ALT SEMICOLON
+&to 3  &kp Z                &kp X           &kp C          &kp V        &kp B                 &kp N             &kp M        &kp COMMA    &kp DOT          &kp FSLH                      &kp BSLH
+                                            &kp BACKSPACE  &kp ESC      &layer_mod 1 SPACE    &layer_mod 2 RET  &kp TAB      &kp DEL
             >;
         };
 
