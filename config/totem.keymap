@@ -51,6 +51,16 @@
             tapping-term-ms = <300>;
             hold-trigger-key-positions = <19 10>;
         };
+
+        gaming_mod: gaming_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GAMING_MOD";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -90,7 +100,7 @@
 
         num_layer {
             bindings = <
-          &trans        &trans        &trans        &kp UNDER        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp KP_EQUAL      &trans     &trans  &trans
+          &kp ESCAPE    &trans        &trans        &kp UNDER        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp KP_EQUAL      &trans     &trans  &trans
           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4     &kp N5              &kp NUMBER_6       &kp N7            &kp N8     &kp N9  &kp N0
 &kp CLCK  &trans        &trans        &kp ENTER     &kp KP_SUBTRACT  &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp PLUS          &kp TILDE  &trans  &kp GRAVE  &trans
                                       &trans        &trans           &trans              &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &trans
@@ -112,10 +122,10 @@
 
         gaming_layer {
             bindings = <
-       &kp TAB           &kp Q  &kp W  &kp E                &kp R        &trans  &trans  &trans  &trans  &trans
-       &kp LEFT_SHIFT    &kp A  &kp S  &kp D                &kp F        &trans  &trans  &trans  &trans  &trans
-&to 0  &kp LEFT_CONTROL  &kp Z  &kp X  &kp C                &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                                &mo 4  &layer_mod 1 ESCAPE  &kp SPACE    &trans  &trans  &trans
+       &kp TAB           &kp Q  &kp W  &kp E  &kp R        &none  &none  &none  &none  &none
+       &kp LEFT_SHIFT    &kp A  &kp S  &kp D  &kp F        &none  &none  &none  &none  &none
+&to 0  &kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V        &none  &none  &none  &none  &none  &none
+                                &mo 4  &mo 1  &kp SPACE    &none  &none  &none
             >;
 
             label = "GAM1";
